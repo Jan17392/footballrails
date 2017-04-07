@@ -1,0 +1,2 @@
+class TeamMapping < ApplicationRecord
+end

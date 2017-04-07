@@ -1,0 +1,13 @@
+<h1>Matches#index</h1>
+<p>Find me in app/views/matches/index.html.erb</p>
+
+<ul>
+<% @matches.last(100).each do |match| %>
+  <li>
+    <h2><%= match.home_team.name %> vs. <%= match.away_team.name %></h2>
+    <% match.predictions.each do |prediction| %>
+      <p><%= prediction.expert.name.capitalize %></p>
+    <% end %>
+  </li>
+<% end %>
+</ul>

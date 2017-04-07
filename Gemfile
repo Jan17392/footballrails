@@ -1,10 +1,32 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
+# Custom Required Gems:
+gem 'fuzzy_match'
+gem 'devise'
+gem 'activeadmin', github: 'activeadmin/activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+
+# active admin skin
+gem 'active_material', github: 'vigetlabs/active_material'
+
+# sidekiq for queuing/jobs
+gem 'sidekiq'
+gem 'sidekiq-failures'
+gem 'sidekiq-scheduler'
+
+# Tokens for API auth
+gem 'simple_token_authentication', '~> 1.0'
+
+# better admin interface from forestadmin
+gem 'forest_liana'
+
+# Rubocop for style improvements
+gem 'rubocop', '~> 0.47.1', require: false
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
@@ -34,6 +56,8 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+
+gem 'nokogiri'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

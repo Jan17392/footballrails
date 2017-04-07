@@ -1,0 +1,49 @@
+:concurrency: 3
+:timeout: 60
+:verbose: true
+:queues:  # Queue priority: https://github.com/mperham/sidekiq/wiki/Advanced-Options
+  - default
+  - mailers
+
+:schedule:
+  betexplorer_matches_scraper_job:
+    every: 1m   # Runs once per minute
+    class: BetexplorerMatchesScraperJob
+  #betexplorer_odds_scraper_job:
+  #  every: 1m   # Runs once per minute
+  #  class: BetexplorerOddsScraperJob
+  #bettingclosed_predictions_scraper_job:
+  #  cron: 0 10 * * *   # Runs once per minute
+  #  class: BettingclosedPredictionsScraperJob
+  #hintwise_predictions_scraper_job:
+  #  every: 2m   # Runs once per minute
+  #  class: HintwisePredictionsScraperJob
+  #zulubet_predictions_job:
+  #  every: 1m   # Runs once per minute
+  #  class: ZulubetPredictionsJob
+  #windrawwin_predictions_scraper_job:
+  #  every: 1m
+  #  class: WindrawwinPredictionsScraperJob
+  #prosoccereu_predictions_scraper_job:
+  #  every: 1m
+  #  class: ProsoccereuPredictionsScraperJob
+  #prosoccergr_predictions_scraper_job:
+  #  every: 1m
+  #  class: ProsoccergrPredictionsScraperJob
+  #statarea_predictions_scraper_job:
+  #  every: 1m
+  #  class: StatareaPredictionsScraperJob
+  #propredictions_predictions_scraper_job:
+  #  every: 1m
+  #  class: PropredictionsPredictionsScraperJob
+  #iqbet_predictions_scraper_job:
+  #  every: 1m
+  #  class: IqbetPredictionsScraperJob
+
+
+
+
+
+
+
+

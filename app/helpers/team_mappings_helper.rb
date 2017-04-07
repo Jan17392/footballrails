@@ -1,0 +1,2 @@
+module TeamMappingsHelper
+end
